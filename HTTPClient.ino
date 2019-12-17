@@ -1,7 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   Serial.println("Board booted");
   WiFi.begin("iitk");
@@ -17,7 +16,6 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
   int i=0;
   if(WiFi.status()==WL_CONNECTED)
   {
