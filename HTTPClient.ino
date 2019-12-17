@@ -21,7 +21,7 @@ void loop() {
   {
     WiFiClient client;
     HTTPClient hc;
-    hc.begin(client,"http://172.26.194.220:5000/data");
+    hc.begin(client,"http://172.26.194.220:5000/data");          //ip address of http server
     hc.addHeader("Content-Type","application/json");
     hc.POST("{\"Counter\":i}");
     i++;
