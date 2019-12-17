@@ -5,6 +5,7 @@
 int i=0;
 void setup() {
   Serial.begin(9600);
+  pinMode(LED_BUILTIN, OUTPUT);   //set the configuration of LED to output mode
   Serial.println("Board booted");
   WiFi.begin("iitk");       //WiFi.begin("User","Password")        i used iitk to connect through IIT Kanpur campus network
   Serial.print("Connecting");
@@ -29,6 +30,9 @@ void loop()
     JSONVar obj;
     obj["Counter"]=i++;
     hc.POST(JSON.stringify(obj));
+    digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(1000);
   }
-  delay(2000);
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);     //LED blinking pattern - blinking:Working off:wifi-disconnected
 }
