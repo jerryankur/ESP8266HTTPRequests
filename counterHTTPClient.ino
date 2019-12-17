@@ -1,3 +1,4 @@
+//sending counter values at the rate of 2 second to http server
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <Arduino_JSON.h>
