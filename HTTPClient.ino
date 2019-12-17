@@ -3,7 +3,7 @@
 void setup() {
   Serial.begin(9600);
   Serial.println("Board booted");
-  WiFi.begin("iitk");
+  WiFi.begin("iitk");    //WiFi.begin("User","Password")        i used iitk to connect through IIT Kanpur campus network
   Serial.print("Connecting");
   while (WiFi.status() != WL_CONNECTED)
   {
